@@ -19,7 +19,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
-\usepackage[latin1, utf8]{inputenc}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -62,8 +62,8 @@
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\Abstract
-\newcommand{\abstractname}{Resumen}
+\Abstract{}
+
 
 \Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
 \newcommand{\keywordname}{Palabras clave} % Defines the keywords heading name
@@ -96,7 +96,7 @@
 \section{Métodos de Transfección}
 
 \begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
-\includegraphics[width=\linewidth]{view}
+\includegraphics[width=\linewidth]{images/view}
 \caption{Wide Picture}
 \label{fig:view}
 \end{figure*}
@@ -119,15 +119,15 @@
 
 
 
-\paragraph{Paragraph} \lipsum[7] % Dummy text
-\paragraph{Paragraph} \lipsum[8] % Dummy text
+\paragraph{Paragraph} %\lipsum[7] % Dummy text
+\paragraph{Paragraph} %\lipsum[8] % Dummy text
 
 \subsection{Subsection}
 
 
 
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{results}
+\includegraphics[width=\linewidth]{images/results}
 \caption{In-text Picture}
 \label{fig:results}
 \end{figure}
@@ -144,12 +144,12 @@ La transfección es una herramienta para la modificación genética. Gracias a s
 \item \textbf{Animales Transgénicos}: Mejoramiento para alimentación.
 \item \textbf{Estudios Genéticos}: Genes 'knockout' o 'knockdown' para estudiar su expresión fenotípica.
 \item \textbf{Fábricas Vivientes}: Producción de proteínas recombinantes utilizando animales.
-\end{enumerate}
+\end{itemize}
 
 
 \subsection{\textbf{Terapia Génica}}
 
-\lipsum[11] % Dummy text
+%\lipsum[11] % Dummy text
 
 \begin{table}[hbt]
 \caption{Table of Grades}
@@ -169,7 +169,7 @@ Richard & Miles & $2$ \\
 
 \subsection{Animales Trangénicos}
 
-\lipsum[12] % Dummy text
+%\lipsum[12] % Dummy text
 
 \begin{description}
 \item[Word] Definition
@@ -179,7 +179,7 @@ Richard & Miles & $2$ \\
 
 \subsection{Estudios Genéticos}
 
-\lipsum[13] % Dummy text
+%\lipsum[13] % Dummy text
 
 \begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
 \item First item in a list
@@ -189,17 +189,17 @@ Richard & Miles & $2$ \\
 
 \subsection{Fábricas Vivientes}
 
-\lipsum[14] % Dummy text
+%\lipsum[14] % Dummy text
 
 \subsection{Subsection}
 
-\lipsum[15-23] % Dummy text
+%\lipsum[15-23] % Dummy text
 
 %------------------------------------------------
 
 \section{Implicancias Bioéticas de la Transfección}
 
-\lipsum[10] % Dummy text
+%\lipsum[10] % Dummy text
 
 %------------------------------------------------
 \phantomsection
@@ -216,7 +216,7 @@ So long and thanks for all the fish \cite{khaliligene2006}.
 \newpage
 \section*{Referencias Bibliográficas}
 \addcontentsline{toc}{section}{Referencias Bibliográficas}
-\bibliographystyle{cell}
+\bibliographystyle{unsrt}
 \bibliography{referencias}
 
 %----------------------------------------------------------------------------------------
