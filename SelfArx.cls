@@ -1,4 +1,4 @@
-% ---------------------------------------------------------------------
+  % ---------------------------------------------------------------------
 % Conference proceedings and article templates for
 % personal open-archiving activities
 % September 2012
@@ -28,7 +28,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{amsmath,amsfonts,amssymb}
 \RequirePackage{graphicx,xcolor}
-\RequirePackage[english]{babel}
+\RequirePackage[spanish]{babel}
 \RequirePackage{booktabs}
 
 %----------------------------------------------------------------------
