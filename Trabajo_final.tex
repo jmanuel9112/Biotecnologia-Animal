@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stylish Article
 % LaTeX Template
 % Version 2.0 (13/4/14)
@@ -19,8 +19,8 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+\usepackage[latin1, utf8]{inputenc}
 
-\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
 
 %----------------------------------------------------------------------------------------
 %	COLUMNS
@@ -47,24 +47,26 @@
 %	ARTICLE INFORMATION
 %----------------------------------------------------------------------------------------
 
-\JournalInfo{Journal, Vol. XXI, No. 1, 1-5, 2013} % Journal information
-\Archive{Additional note} % Additional notes (e.g. copyright, DOI, review/research article)
+\JournalInfo{Taller de Biotecnología Animal, 2014-I} % Journal information
+\Archive{Review} % Additional notes (e.g. copyright, DOI, review/research article)
 
-\PaperTitle{Article Title} % Article title
+\PaperTitle{Transfección en Animales} % Article title
 
-\Authors{John Smith\textsuperscript{1}*, James Smith\textsuperscript{2}} % Authors
-\affiliation{\textsuperscript{1}\textit{Department of Biology, University of Examples, London, United Kingdom}} % Author affiliation
-\affiliation{\textsuperscript{2}\textit{Department of Chemistry, University of Examples, London, United Kingdom}} % Author affiliation
-\affiliation{*\textbf{Corresponding author}: john@smith.com} % Corresponding author
+\Authors{Juan Manuel Iglesias Artola\textsuperscript{1}, Gianfranco Villamonte Cuneo\textsuperscript{1}} % Authors
+\affiliation{\textsuperscript{1}\textit{School of Biology, Universidad Ricardo Palma, Lima, Peru}} % Author affiliation
+%\affiliation{\textsuperscript{2}\textit{Department of Chemistry, University of Examples, London, United Kingdom}} % Author affiliation
+\affiliation{*\textbf{Corresponding authors}: jmanuel9112@icloud.com / giancuneo@gmail.com } % Corresponding author
 
-\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
-\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
 
-\Abstract{\lipsum[1]~}
+\Abstract
+\newcommand{\abstractname}{Resumen}
+
+\Keywords{Keyword1 --- Keyword2 --- Keyword3} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Palabras clave} % Defines the keywords heading name
 
 %----------------------------------------------------------------------------------------
 
@@ -82,16 +84,16 @@
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
 
-\section*{Introduction} % The \section*{} command stops section numbering
+\section{Introducción} 
 
-\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+\addcontentsline{toc}{section}{Introducción} % Adds this section to the table of contents
 
-\lipsum[1-3] % Dummy text
+
  and some mathematics $\cos\pi=-1$ and $\alpha$ in the text\footnote{And some mathematics $\cos\pi=-1$ and $\alpha$ in the text.}.
 
 %------------------------------------------------
 
-\section{Methods}
+\section{Métodos de Transfección}
 
 \begin{figure*}[ht]\centering % Using \begin{figure*} makes the figure take up the entire width of the page
 \includegraphics[width=\linewidth]{view}
@@ -99,14 +101,13 @@
 \label{fig:view}
 \end{figure*}
 
-\lipsum[4] % Dummy text
 
 \begin{equation}
 \cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
 \label{eq:refname2}
 \end{equation}
 
-\lipsum[5] % Dummy text
+
 
 \begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
 \item First item in a list
@@ -116,14 +117,14 @@
 
 \subsection{Subsection}
 
-\lipsum[6] % Dummy text
+
 
 \paragraph{Paragraph} \lipsum[7] % Dummy text
 \paragraph{Paragraph} \lipsum[8] % Dummy text
 
 \subsection{Subsection}
 
-\lipsum[9] % Dummy text
+
 
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{results}
@@ -135,11 +136,18 @@ Reference to Figure \ref{fig:results}.
 
 %------------------------------------------------
 
-\section{Results and Discussion}
+\section{Aplicaciones de la Transfección}
 
-\lipsum[10] % Dummy text
+La transfección es una herramienta para la modificación genética. Gracias a sus múltiples métodos es posible realizar innumerables aplicaciones como:
+\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+\item \textbf{Terapia Génica}: Cura de enfermedades.
+\item \textbf{Animales Transgénicos}: Mejoramiento para alimentación.
+\item \textbf{Estudios Genéticos}: Genes 'knockout' o 'knockdown' para estudiar su expresión fenotípica.
+\item \textbf{Fábricas Vivientes}: Producción de proteínas recombinantes utilizando animales.
+\end{enumerate}
 
-\subsection{Subsection}
+
+\subsection{\textbf{Terapia Génica}}
 
 \lipsum[11] % Dummy text
 
@@ -159,7 +167,7 @@ Richard & Miles & $2$ \\
 \label{tab:label}
 \end{table}
 
-\subsubsection{Subsubsection}
+\subsection{Animales Trangénicos}
 
 \lipsum[12] % Dummy text
 
@@ -169,7 +177,7 @@ Richard & Miles & $2$ \\
 \item[Idea] Text
 \end{description}
 
-\subsubsection{Subsubsection}
+\subsection{Estudios Genéticos}
 
 \lipsum[13] % Dummy text
 
@@ -179,7 +187,7 @@ Richard & Miles & $2$ \\
 \item Third item in a list
 \end{itemize}
 
-\subsubsection{Subsubsection}
+\subsection{Fábricas Vivientes}
 
 \lipsum[14] % Dummy text
 
@@ -188,18 +196,27 @@ Richard & Miles & $2$ \\
 \lipsum[15-23] % Dummy text
 
 %------------------------------------------------
+
+\section{Implicancias Bioéticas de la Transfección}
+
+\lipsum[10] % Dummy text
+
+%------------------------------------------------
 \phantomsection
 \section*{Acknowledgments} % The \section*{} command stops section numbering
 
 \addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
 
-So long and thanks for all the fish \cite{Figueredo:2009dg}.
+So long and thanks for all the fish \cite{khaliligene2006}.
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
-\phantomsection
-\bibliographystyle{unsrt}
+
+\newpage
+\section*{Referencias Bibliográficas}
+\addcontentsline{toc}{section}{Referencias Bibliográficas}
+\bibliographystyle{cell}
 \bibliography{referencias}
 
 %----------------------------------------------------------------------------------------
