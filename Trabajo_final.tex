@@ -19,7 +19,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
-
+\usepackage[spanish]{babel}
 
 
 %----------------------------------------------------------------------------------------
@@ -41,6 +41,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{hyperref} % Required for hyperlinks
+\usepackage{cite}
 \hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
 
 %----------------------------------------------------------------------------------------
@@ -53,9 +54,9 @@
 \PaperTitle{Transfección en Animales} % Article title
 
 \Authors{Juan Manuel Iglesias Artola\textsuperscript{1}, Gianfranco Villamonte Cuneo\textsuperscript{1}} % Authors
-\affiliation{\textsuperscript{1}\textit{School of Biology, Universidad Ricardo Palma, Lima, Peru}} % Author affiliation
+\affiliation{\textsuperscript{1}\textit{Facultad de Ciencias Biológicas, Universidad Ricardo Palma, Lima, Peru}} % Author affiliation
 %\affiliation{\textsuperscript{2}\textit{Department of Chemistry, University of Examples, London, United Kingdom}} % Author affiliation
-\affiliation{*\textbf{Corresponding authors}: jmanuel9112@icloud.com / giancuneo@gmail.com } % Corresponding author
+\affiliation{*\textbf{Correspondencia}: jmanuel9112@icloud.com / giancuneo@gmail.com } % Corresponding author
 
 
 %----------------------------------------------------------------------------------------
@@ -86,10 +87,13 @@
 
 \section{Introducción} 
 
-\addcontentsline{toc}{section}{Introducción} % Adds this section to the table of contents
+Con la transfección se ha logrado la capacidad de expresar genes de interés en células eucariotas. Esta capacidad ha perdido obtener un mejor entendimiento de la biología celular, la biología molecular y la genética de las células. Al expresar proteínas en células de mamíferos, se ha podido entender aspectos detallados de la síntesis protéica, las interacciones entre proteínas, los efectos de las mutaciones en su función, y las interacciones intercelulares. Además, esta teconología ha llevado al desarrollo de animales trangénicos, a la fertilización \textit{in vitro}, y a la posibilidad de usar la tranferencia de genes para tratar desórdenes genéticos.
 
+Los virus fueron por mucho tiempo la forma más conveniente de genes a células mamíferas. En 1973 Graham y van der Eb \cite{Graham:1973aa} utilizaron el adenovirus 2 para transfomar células de rata, mientras que en 1984 Cepko et al. \cite{Cepko:1984aa} desarrollaron un retrovirus murínico para la introducción de secuencias de DNA en células mamíferas. Si bien los virus constituyen un medio eficiente para lograr la transfección \textit{in vitro}, la construcción de los vectores es laboriosa, consume tiempo, y tiene diversas limitaciones para su uso \textit{in vivo}.
 
- and some mathematics $\cos\pi=-1$ and $\alpha$ in the text\footnote{And some mathematics $\cos\pi=-1$ and $\alpha$ in the text.}.
+No obstante la alta eficiencia de la transfección por medio de vectores virales, otros métodos han sido desarrollados. Los trabajos realizados por Pagano et al. fueron pioneros en su área al lograr una alta transferencia de genes a células mamíferas utilizando dietilaminoetil-dextrano (DEAE-D) mezclado con RNA y DNA  \cite{McCutchan:1968aa, Pagano:1967aa}. Después, se demostró que otros métodos también son eficaces: la encapsulación de DNA utilizando liposomas \cite{Fraley:1980aa, Wong:1980aa, Straubinger:1983aa, Fraley:1981aa}, la fusión inducida por polietilenglicol del DNA en los eritrocitos fantasma \cite{Straus:1980aa}, la electroporación \cite{Neumann:1982aa}, los coprecipitados de fosfato de calcio/DNA \cite{Wigler:1979aa}, y los policationes/dimetil sulfóxidos \cite{Kawai:1984aa}. Sin embargo, la eficiencia de los métodos utilizados varía con respecto a las tipos celulares y en general, no fueron muy eficientes y presentaban una alta toxicidad celular.
+
+En la actualidad existen tres grandes grupos de métodos que pueden ser utilizados \cite{Kim:2010aa}: \textit{a)} los métodos biológicos, \textit{b)} los métodos químicos y \textit{c)} los métodos físicos. De estos grupos se pueden emplear métodos que produzcan una transfección pasajero o una integración estable en el genoma del hospedero. En este review se resumen las estrategias experimentales más generales, sus aplicaciones y las implicaciones bioéticas que pueden tener la tranfección de células animales.
 
 %------------------------------------------------
 
@@ -203,7 +207,7 @@ Richard & Miles & $2$ \\
 
 %------------------------------------------------
 \phantomsection
-\section*{Acknowledgments} % The \section*{} command stops section numbering
+\section*{Agradecimientos} % The \section*{} command stops section numbering
 
 \addcontentsline{toc}{section}{Acknowledgments} % Adds this section to the table of contents
 
@@ -213,7 +217,6 @@ So long and thanks for all the fish \cite{khaliligene2006}.
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
 
-\newpage
 \section*{Referencias Bibliográficas}
 \addcontentsline{toc}{section}{Referencias Bibliográficas}
 \bibliographystyle{unsrt}
