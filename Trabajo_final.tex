@@ -20,6 +20,9 @@
 
 \documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
 \usepackage[spanish]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+
 
 %----------------------------------------------------------------------------------------
 %	COLUMNS
@@ -42,6 +45,7 @@
 \usepackage{hyperref} % Required for hyperlinks
 \usepackage{cite}
 \hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+\setlength{\extrarowheight}{1.5pt}
 
 %----------------------------------------------------------------------------------------
 %	ARTICLE INFORMATION
@@ -94,44 +98,77 @@ La transfección por medio de vectores virales es altamente eficiente, se han de
 
 En la actualidad existen tres grandes grupos de métodos que pueden ser utilizados \cite{Kim:2010aa}: \textit{a)} los métodos biológicos, \textit{b)} los métodos químicos y \textit{c)} los métodos físicos. En cada uno de estos grupos existen métodos que se pueden emplear para producir una transfección pasajera o una integración estable en el genoma del hospedero. En este minireview se resumen las estrategias experimentales más generales, sus aplicaciones y las implicaciones bioéticas que puede tener la transfección de células animales.
 
-\section{Métodos de Transfección}
-Se han desarrollado diversas técnicas de transfección que cumplen con el propósito de transferir ácidos nucléicos al interior de las células. Existen ciertas características que permiten una transfección exitosa, estas son: alta eficiencia en el transporte del ácido nucléico a la ubicación celular apropiada (el núcleo para el DNA plasmídico y el citoplasma para el RNA); baja toxicidad celular; mínima interferencia con la fisiología celular normal; uso sencillo y que sea reproducible \cite{Schenborn}. Para el caso de la transfección génica utilizada para terapias se deben tomar consideraciones adicionales tales como la vida-media y el transporte a un tipo celular específico. En esta sección se discuten los tres principales métodos de transfección, los métodos biológicos, químicos y físicos
+%================Cuadro 1 ==============================
+\begin{table*}[th!]
+\centering
+\begin{tabular}{p{8cm} p{4cm}} \toprule
+Gen & Detección \\ \hline
+$\beta$-galactosidasa ($\beta$-gal) & Enzimático y colorimétrico \\ 
+Cloranfenicol acetil transferasa (CAT) & Enzimático y radioactivo \\
+Luciferasa & Luminiscencia \\
+Proteína verde fluorescente (GFP) & Fluorescencia \\ \bottomrule
+\end{tabular}
+\caption{Genes reporteros comunes}
+\label{Tab:reportero}
+\end{table*}
+%================Cuadro 1 ==============================
 
-\subsection{Métodos biológicos}
+\section{Métodos de Transfección}
+Se han desarrollado diversas técnicas de transfección que cumplen con el propósito de transferir ácidos nucléicos al interior de las células. Existen ciertas características que permiten una transfección exitosa, estas son: alta eficiencia en el transporte del ácido nucléico a la ubicación celular apropiada (el núcleo para el DNA plasmídico y el citoplasma para el RNA); baja toxicidad celular; mínima interferencia con la fisiología celular normal; uso sencillo y que sea reproducible \cite{Schenborn}. Para el caso de la transfección génica utilizada para terapias se deben tomar consideraciones adicionales tales como la vida-media y el transporte a un tipo celular específico. En esta sección se discuten los tres principales métodos de transfección, los métodos biológicos, químicos y físicos.
+\subsection{Transfección transitoria}
+La transfección transitoria de genes esta sujeta a varios parámetros. El método de transferencia de genes, la fisiología celular y el tipo celular (cultivos en suspensión o adherentes), el método enzimático o colorimétrico utilizado para cuantificar la actividad del gen reportero, la cantidad de DNA y la normalización de la data. El periodo de expresión del gen en una transfección génica varía entre 24 a 72 h. Las condiciones celulares son críticas para el éxito, siendo las  células saludables y que se encuentren en división. Se pueden alcanzar las condiciones óptimas de transfección utilizando un procedimiento de purificación de plásmido de alta calidad. La efeciencia y reproducibilidad de la transfección puede ser determinada utilizando de un segundo gen reportero que exprese un producto génico que pueda ser detectado y medido de manera sencilla. Tal gen reportero no debe estar presente en el genoma del tipo celular o, en el peor de los casos, presente y expresado en bajos niveles. Los genes reporteros más utilizados se presentan en el Cuadro \ref{Tab:reportero}.
+
+Es importante recalcar que la eficiencia en la expresión del gen reportero disminuye drásticamente con la  integridad del plásmido y su habilidad por llegar al núcleo \cite{Zohar:2001aa}. 
+
+Los métodos de transfección transitoria generalmente dirigen el DNA plasmídico al citoplasma y no está claro qué porcentaje de estas moléculas lineares o circulares alcanzan el núcleo celular. Además, se deben definir los parámetros experimentales con cuidado para lograr cierto grado de reproducibilidad. Se ha sugerido que entre los diferentes mecanismos, la difusión pasiva de los plásmidos a través del citoplasma y los poros nucleares representa la forma por la cual los genes reporteros  pueden migrar al núcleo celular y ser activados transcripcionalmente.  Sin embargo, nueva evidencia presenta un nuevo mecanismo para explicar la transferencia del DNA plasmídico al núcleo celular basado en las señales de importanción del DNA \cite{Vacik:1999aa, Zohar:2001aa}.
+
+
+
+\subsubsection{Métodos biológicos}
 El método más utilizado en la investigación clinical es el de la transfección mediada por virus, también conocida como transducción \cite{Pfeifer:2001aa}. Este método es altamente eficiente y permite la expresión sostenible del transgen \textit{in vivo} debido a la naturaleza viral de la integración en el genoma del huésped. Por ejemplo, se ha utilizado el virus de la leucemia murina (MLV)  como vector viral para establecer la expresión sostenible de genes de interés en humanos \cite{Hacein-Bey-Abina:2002aa, Roesler:2002aa}. El MLV integra su DNA en el genoma del hospedero, el cual es posteriormente expresado. El DNA del MLV integrado se replica con el genoma del hospedero, lo que permite la expresión sostenible del gen de interés.
 
 La citotoxicidad y la inmunogenicidad representan las mayores desventajas de la transfección mediada por virus. La introducción del vector viral puede causar una reacción inflamatoria y una mutación insercional, debido a que los vectores virales se integran de manera azarosa al genoma del hospedero, lo cual puede afectar a genes supresores de tumores, activar oncogenes, o interrumpir genes esenciales \cite{Woods:2003aa}. Otra desventaja de este método es que la cápside de un virus tiene espacio limitado para que un gen extraño continúe siendo infectivo. 
 
-\subsection{Métodos químicos}
+
+\subsubsection{Métodos químicos}
 Los métodos de transfección químicos son los más utilizados en el área de investigación y fueron los primeros en ser utilizados para introducir genes foráneos a células mamíferas \cite{Schenborn2000}. Los métodos químicos utilizan en su mayoría polímeros catiónicos, fosfato de calcio, lípidos catiónicos (el primer método utilizado) o amino ácidos catiónicos \cite{Schenborn2000, Holmen:1995aa, Washbourne:2002aa}. En líneas generales el principio detrás de la transfección por métodos químicos es el mismo. Los compuestos utilizados están cargados positivamente lo que les permite formar complejos con los grupos fosfatos, cargados negativamente, de los ácidos nucléicos. Se piensa que esto permite la aposición de los complejos con la membrana celular que tiene carga negativa. Se desconoce el mecanismo exacto de como estos complejos pasan por la membrana celular; sin embargo, se considera que la internalización se produce por endocitosis y fagocitosis. Una vez que el DNA ingresa a la célula, este debe ser llevado al núcleo para ser expresado y, una vez más, no se conoce el mecanismo de traslocación al núcleo \cite{Kim:2010aa}. 
+
 
 La eficiencia de la transfección en esta caso depende de factores como la proporción ácido nucléico/químico, pH de la solución y las condiciones de la membrana celular, todo esto lleva a que el proceso de transfección tenga una baja eficiencia, especialmente \textit{in vivo}, comparado con los métodos mediados por virus. Sin embargo, estos métodos presentan baja citotoxicidad, no existe mutagénesis, no hay DNA extra y no tiene límites de tamaño para el ácido nucléico. Además, la eficiencia de la transfección química varía dependiendo del tipo celular a utilizar.
 
-\subsubsection*{Coprecipitación con fosfato de calcio}
+\paragraph*{Coprecipitación con fosfato de calcio}
 En este método el calcio de asocia con las cargas negativas del ácido nucléico. La adición de un buffer fosfato resulta en la precipitación del DNA con el calcio y fosfato, se piensa que estas partículas pueden ingresar a las células por fagocitosis \cite{Loyter:1982aa}. Para que la trasfección sea satisfactoria se debe controlar el tamaño del precipitado, se han correlacionado los precipitados pequeños con una mayor eficiencia de transfección \cite{Jordan:1996aa}. El tamaño de las partículas es sensible a la concentración de calcio, DNA, pH y temperatura durante la precipitación y el modo en el que el buffer salino y la solución de DNA son mezcladas. Para mantener una alta concentración de DNA, se puede incluir un plásmido inerte p DNA genómico de alto peso molecular \cite{Strain:1985aa}.
 
-\subsubsection*{DEAE-Dextran}
+\paragraph*{DEAE-Dextran}
 Dietilaminoetildextran, or DEAE-dextran, es un reactivo polimérico policatiónico que se une a y transfecta ácidos nucléicos \cite{McCutchan:1968aa}.  El complejo DEAE-dextran/DNA puede ser tomado por la célula por endocitosis o fagocitosis \cite{Yang:1997aa, Luthman:1983aa}. Se ha encontrado que el tratamiento con cloroquina incrementa la expresión del DNA transfectado en algunos tipos celulares, posiblemente al neutralizar el pH de los lisosomas en los cuales el DNA es internalizado \cite{Luthman:1983aa}. Es necesario que durante el proceso de transfección la morfología celular sea monitoreada puesto que el DEAE-dextran puede ser altamente tóxico para las células.
 
-\subsubsection*{Liposomas catiónicos}
+\paragraph*{Liposomas catiónicos}
 El primer lípido catiónico sintético publicado como un transportador de ácidos nucléicos fue el bromuro de 1,2-dioleiloxipropil-3-trimetilamonio (DOTMA) desarrollado por Felgner el al \cite{Felgner01111987}. Desde entonces se han diseñad diferentes tipos de lípidos catióonicos sintéticos para la transfección, conservando la misma estructura general del DOTMA, con un grupo mono o policationico covalentemente adherido a una porción lipofílica. La región catiónica de la molécula se asocia con las cargas negativas de los ácidos nucléicos. Se ha correlacionado una carga total positiva o neutra del complejo lípido/DNA con una mayor eficiencia de transfección de células in vitro. Se piensa que la carga positiva o neutra reduce la repulsión electrostática entre el ácido nucléico y la membrana celular cargada negativamente. Se piensa, también, que el complejo lípido/DNA ingresa a la célula por endocitosis.  Se puede liberar el ácido nucléico de las vesículas endosomales utilizando otros lípidos, tales como dioleilfosfatidiletanolamina (DOPE) en la formulación del liposoma \cite{Farhood:1995aa}. 
 
 Existen tres parámetros esenciales que necesitan ser optimizados para poder utilizar cualquier liposoma en la transfección. Cada tipo celular requiere que se determine una cantidad óptima de DNA en combinación con la concentración del lípido catiónico. Existe una concentración óptima de DNA y lípido para cada tipo celular, con una alta toxicidad en concentraciones elevadas y baja eficiencia en bajas concentraciones. Otro parámetro que requiere optimización es el intervalo de tiempo de la transfección, dependiendo de los reactivos y las condiciones utilizadas, el intervalo de tiempo puede variar entre 1 a 24 horas. Las incubaciones más largas son por lo general más tóxicas.
 
-\subsection{Métodos físicos}
+\subsubsection{Métodos físicos}
 Los métodos de tranfección físicos se han desarrollado recientemente y utilizan una diversa gama de herramientas físicas para transportar los ácidos nucléicos al interior de las células. Estos métodos incluyen la microinyección directa, el transporte balístico de partículas, la electroporación, y la transfección basada en láseres \cite{Mehier-Humbert:2005aa}.  
 
+\paragraph*{Microinyección}
 En general, el método de micro inyección introduce de manera directa el ácido nucléico en el citoplasma o núcleo \cite{Martinou:1995aa, Ikeda:1995aa}. Este método es efectivo en la introducción de los ácidos nucléicos dentro de las células pero requiere de mucha habilidad, bastante tiempo y ocasionalmente ocasiona la muerte celular. 
 
-El transporte de partículas por medios balísticos emplea partículas de oro que se conjugan con los ácidos nucléicos \cite{Lo:1994aa, OBrien:2006aa}. Estos conjugados son disparados a alta velocidad dentro de las células receptoras (``pistola de genes''). Este método es sencillo y confiable pero requiere de costosos equipos y causa daños físicos a las muestras. 
+Esta técnica ha sido aplicada exitosamente para transferir genes a células musculares y particularmente a células epiteliales \cite{Sawamura:2002aa, Davis:1993aa}. Una limitación de este procedimiento es la falta de control de parámetros como la concentración de DNA plasmídico, la degradación y la eficiencia en la transferencia de genes. Sin embargo para aplicaciones específicas como la transferencia ectópica de genes, este procedimiento tiene ventajas sobre los otros métodos.
 
-La electroporación es el método físico más empleado; sin embargo, se desconoce el mecanismo exacto, pero se supone que los pulsos eléctricos perturban las membranas celulares, produciendo agujeros por los cuales los ácidos nucléicos pueden ingresar \cite{Inoue:2001aa}. Debido a que la electroporación es un método sencillo y rápido, es posible tranfectar un gran número de células en poco tiempo una vez que se han determinado las condiciones óptimas para la electroporación. 
+\paragraph*{Transfección por métodos balísticos}
+El transporte de partículas por medios balísticos emplea partículas de oro que se conjugan con los ácidos nucléicos \cite{Lo:1994aa, OBrien:2006aa}. Estos conjugados son disparados a alta velocidad dentro de las células receptoras (``pistola de genes''). Dentro de la célula el ácido nucléico se disocia de las partículas de oro.  Este método es sencillo y confiable pero requiere de equipos y causa daños físicos a las muestras. 
 
+Se han diseñado diferentes tipos de intrumentos para este método. Las ácidos nucléicos son primero precipitados en esferas de oro y depositas en hojas de Mylar. Las partículas de DNA/oro o RNA/oro son colocadas en el instrumento para después ser aceleradas por una descarga de alto voltaje y lanzadas a las células o tejidos de elección. Los dispositivos comerciales utilizan un pulso de helio a baja presión para acelerar las esferas de oro. Con estos dispositivos, las muestras pueden ser preparadas utilizando tubos recubiertos con partículas de oro. 
+
+\paragraph*{Electroporación}
+La electroporación es el método físico más empleado; sin embargo, se desconoce el mecanismo exacto, pero se supone que los pulsos eléctricos perturban las membranas celulares, produciendo agujeros por los cuales los ácidos nucléicos pueden ingresar \cite{Inoue:2001aa}. Debido a que la electroporación es un método sencillo y rápido, es posible tranfectar un gran número de células en poco tiempo una vez que se han determinado las condiciones óptimas para la electroporación.  Las células son suspendidas en una concentración de 10$^6$-10$^7$ células/mL en un buffer salino de electroporación, buffer salino HEPES o medio de cultivo sin suero (las células adherentes necesitan ser tripsinizadas antes de la electroporación). Las células son después transferidas a una cubeta estéril y se añade el DNA a ser transferido. Para los experimentos en los que se necesita una expresión transitoria, se añade DNA superenrrollado a una concentración de 10-40 $\mu$g/mL; para una transfección estable se añade DNA lineal con una concentración de 1-20 $\mu$g/mL.  Después de mezclar las células con el DNA para la transfección, son sometidas a uno o más electroshocks, las células son incubadas en medio selectivo después de un periodo de recuperación. 
+
+Los parámetros más críticos a optimizar para cualquier tipo celular son la magnitud del voltaje y la duración del pulso de corriente. Para esto, son efectivas las combinaciones de voltajes altos con pulsos de corto tiempo o voltajes bajos con tiempos más largos. Sin embargo, las condiciones óptimas dependen de las características de la célula, conjuntamente con la conductividad del buffer de electroporación y la temperatura. La electroporación puede realizarse a temperatura ambiente o en hielo, pero es necesario determinar empíricamente las condiciones óptimas para cada tipo célula \cite{Chu11021987}.  El voltaje excesivo y/o la duración de los pulsos resulta en la muerte celular. Durante el establecimiento de las condiciones adecuadas  de electroporación se debe monitorear el ratio entre muerte celular y eficiencia de transferencia para un tipo celular dado. La transfección óptima debe ocurrir bajo condiciones que  causen aproximadamente el 50\% de muerte celular \cite{Schenborn}.
+
+\paragraph*{Láser}
 La transfección mediada por láser (también conocida como optoporación o fototransfección) utiliza un pulso de láser para irradiar la membrana celular con la finalidad de formar un poro momentáneo \cite{Shirahata:2001aa, Barrett:2006aa}. Cuando el láser induce la formación del poro, los ácidos nucléicos en el medio son trasferidos dentro de la célula debido a la diferencia osmótica entre el medio y el citosol. El método de láser permite observar a la células siendo transfectada y hacer poros en cualquier ubicación de la célula. Este método puede ser aplicado a células pequeñas, debido a que utiliza un láser, pero para tal caso es necesario un sistema de microscopio láser. 
 
 Además de los métodos mencionados, existen otros métodos físicos como el ultrasonido (sonoporación) y la utilización de un campo magnético (magnetofección) \cite{Kim:1996aa, Dobson:2006aa, Scherer:2002aa}
-
-
 
 \section{Aplicaciones de la Transfección}
 
